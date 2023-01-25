@@ -1456,6 +1456,8 @@ class ESASkyClass(BaseQuery):
         url_key = ""
         if self.__PRODUCT_URL_STRING in maps_table.keys():
             url_key = self.__PRODUCT_URL_STRING
+        if url_key == "" and "prod_url" in maps_table.keys():
+            url_key = "prod_url"
         if url_key == "" and self.__ACCESS_URL_STRING in maps_table.keys():
             url_key = self.__ACCESS_URL_STRING
         if url_key == "" or mission == "ALMA":
