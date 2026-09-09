@@ -97,8 +97,8 @@ class TestESASky:
 
         assert Path(tmp_path, mission.upper()).exists()
         if mission == "Herschel":
-            assert isinstance(result[mission.upper()]["1342253595"]["WBS"]["WBS-V_USB_4b"], HDUList)
-            assert isinstance(result[mission.upper()]["1342253595"]["HRS"]["HRS-H_LSB_4b"], HDUList)
+            assert isinstance(result[mission.upper()]["1342253595"]["WBS"]["WBS-V_LSB_4b"], HDUList)
+            assert isinstance(result[mission.upper()]["1342253595"]["HRS"]["HRS-V_LSB_4b"], HDUList)
         else:
             assert isinstance(result[mission.upper()][0], HDUList)
             result[mission.upper()][0].close()
